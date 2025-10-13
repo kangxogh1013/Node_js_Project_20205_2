@@ -74,3 +74,5 @@ function saveResources()
 {
     fs.writeFileSync(resourceFilePath, JSON.stringify(global.players, null, 2));            //JSON 파일로 저장
 }
+
+module.exports = router;                                                //라우터 등록
