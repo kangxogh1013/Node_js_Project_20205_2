@@ -5,9 +5,6 @@ using UnityEngine.Networking;
 using System.Text;
 using Newtonsoft.Json;
 using System;
-using UnityEditor.PackageManager.Requests;
-using Unity.VisualScripting;
-
 public class GameAPI : MonoBehaviour
 {
     private string baseUrl = "http://localhost:4000/api";                   //Node.js ¼­¹öÀÇ URL
