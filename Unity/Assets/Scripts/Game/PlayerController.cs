@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    [Header("Movement Settings")]
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float roateSpeed = 100f;
+
+    void Update()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        Vector3 moveDirection = transform.forward * vertical;
+        transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
+        transform.Rotate(Vector3.up * horizontal * roateSpeed * Time.deltaTime);
+    }
+}
